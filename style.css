@@ -59,7 +59,8 @@
 
 :root {
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-heading: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Cal Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-nav: 'Cal Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -105,6 +106,8 @@ body {
 
 /* Navigation */
 .nav {
+  font-family: var(--font-family-nav);
+  font-weight: var(--font-weight-regular);
   position: fixed;
   top: 0;
   width: 100%;
@@ -127,7 +130,7 @@ body {
 
 .nav-logo {
   font-size: 1.25rem;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -189,10 +192,15 @@ body {
 }
 
 .hero-subtitle {
+  font-family: var(--font-family-heading);
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   color: var(--color-text-tertiary);
   margin-bottom: var(--spacing-lg);
   font-weight: var(--font-weight-medium);
+  span {
+    color: var(--color-neutral-300);
+    padding: 0 .5rem;
+  }
 }
 
 .hero-description {
@@ -211,7 +219,7 @@ section {
 .section-title {
   font-family: var(--font-family-heading);
   font-size: clamp(1.75rem, 4vw, 2.25rem);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-2xl);
   text-align: center;
@@ -237,7 +245,7 @@ section {
 .about-text h3 {
   font-family: var(--font-family-heading);
   font-size: 1.5rem;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
   margin: var(--spacing-2xl) 0 var(--spacing-lg);
 }
@@ -256,7 +264,7 @@ section {
 .experience-item h4 {
   font-family: var(--font-family-heading);
   font-size: 1.25rem;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-xs);
 }
@@ -279,7 +287,7 @@ section {
   margin: 0 auto;
 }
 
-.video-container {
+.media-container {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -289,7 +297,7 @@ section {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.video-container iframe {
+.media-container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -300,13 +308,14 @@ section {
 .work-content h3 {
   font-family: var(--font-family-heading);
   font-size: 1.5rem;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-md);
 }
 
 .work-content p {
   font-size: 1.125rem;
+  margin-bottom: var(--spacing-lg);
   color: var(--color-text-secondary);
   line-height: 1.7;
 }

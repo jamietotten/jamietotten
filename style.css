@@ -207,7 +207,7 @@ body {
   font-size: 1.125rem;
   color: var(--color-text-secondary);
   max-width: 600px;
-  margin: 0 auto;
+  margin: var(--spacing-xs) auto 0;
   line-height: 1.7;
 }
 
@@ -293,8 +293,19 @@ section {
   height: 0;
   overflow: hidden;
   border-radius: var(--border-radius-lg);
-  margin-bottom: var(--spacing-lg);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.media-container:not(+figcaption) {
+  margin-block-end: var(--spacing-lg);
+}
+
+.media-container + figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  margin-block-start: var(--spacing-xs);
+  margin-block-end: var(--spacing-xl);
 }
 
 .media-container iframe {
@@ -313,11 +324,27 @@ section {
   margin-bottom: var(--spacing-md);
 }
 
-.work-content p {
+.work-content ul {
+
+  padding-inline-start: var(--spacing-md);
+  margin-block-end: var(--spacing-md);
+  list-style: disc;
+
+  li {
+    margin-block-end: var(--spacing-xs);
+  }
+}
+
+.work-content p,
+.work-content li {
   font-size: 1.125rem;
   margin-bottom: var(--spacing-lg);
   color: var(--color-text-secondary);
   line-height: 1.7;
+}
+
+.work-content p:has(+ ul) {
+  margin-bottom: var(--spacing-md);
 }
 
 /* Contact Section */
